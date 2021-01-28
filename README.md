@@ -95,7 +95,7 @@ At present, such games focus on core skills such as algorithms and datastructure
 In this project you will study the ecosystem of programming games and their platforms, with attention to their relevance for identifying the skills needed by Red Hat engineers.
 You will provide guidance and recommendations on the design of a game or game platform that may better suit our needs than existing offerings, perhaps including designing or prototyping.
 
-Note: For this project, the code provided with the candidate's application MUST take the form of an original bot for playing a code game such as those linked below. Any programming language may be used 
+Note: For this project, the code provided with the candidate's application MUST take the form of an original bot for playing a code game such as those linked below. Any programming language may be used.
 
 Skills: Experience with game design, technical recruitment or middleware skills training may be beneficial.
 
@@ -103,7 +103,8 @@ Reading:
 [codingame](https://www.codingame.com/) ;
 [battlesnake](https://play.battlesnake.com/) ;
 [Halite](https://halite.io/) ;
-[battlecode](https://battlecode.org/)
+[battlecode](https://battlecode.org/) ;
+[microcorruption](https://microcorruption.com/login)
 
 ### Roll your own project
 
@@ -126,6 +127,6 @@ We don't like: cover letters; code that doesn't compile; tests that fail; code y
 Yes, we've seen it all before... 
 
 For summer 2021 we expect to be operating entirely online, with interviews and subsequent project supervision taking place without physical contact.
-Whilst our Newcastle office may reopen over the course of the summer, attendance onsite will then be optional not mandatory.
+Whilst our Newcastle office may reopen over the course of the summer, attendance onsite would then be optional not mandatory.
 
 Deadline for applications: 12 noon, Monday 22nd February, 2021.
