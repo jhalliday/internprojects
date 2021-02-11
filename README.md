@@ -106,6 +106,21 @@ Reading:
 [battlecode](https://battlecode.org/) ;
 [microcorruption](https://microcorruption.com/login)
 
+### Effectiveness of rebalancing a Kafka cluster
+
+Apache Kafka is a distributed messaging platform capable of very high performance and horizontally scalable. In Kafka, messages are stored in Topics which are replicated and distributed across the Brokers which form the cluster. In a balanced cluster the Topics are evenly distributed amongst the Brokers. However, in practice, clusters become unbalanced due to either poor design, unpredictable workloads or the addition/removal of Brokers.
+
+Tools exist to rebalance a Kafka cluster by either switching which Topic replica is the master, or by moving replicas to under-utilised Brokers. This latter operation can be expensive and take hours to migrate data from one Broker to another. During this time the cluster will be operating at reduced capacity because I/O and network bandwidth is being taken up with the rebalance.
+
+In this project you will use Kafka running on Kubernetes to investigate two things. Firstly, what are the optimal (or good) values for tuning a rebalance to trade off speed vs impact. Secondly, and a stretch goal is to investigate the impact of a rebalance on a running cluster. For instance, how long will it take? Will the existing workload be affected? What are the financial implications if certain data transfers are charged for and others not?
+
+Skills: An interest in distrubuted systems and performance modelling may be beneficial.
+
+Reading: [Kafka - The Definitive Guide](https://github.com/jitendra3109/ApacheKafka/blob/master/Docs/confluent-kafka-definitive-guide-complete.pdf); 
+[Cruise Control introduction](https://www.youtube.com/watch?v=lf31udm9cYY);
+[Strimzi - Running Kafka on Kubernetes](https://strimzi.io/)
+
+
 ### Roll your own project
 
 Internship candidates may also submit proposals of their own devising, in the form of a brief outline of the topic and a clear description of how it aligns with Red Hat's needs.
