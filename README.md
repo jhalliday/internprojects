@@ -1,6 +1,6 @@
 # Red Hat Newcastle Student Projects
 
-For 2021 this page replaces [https://developer.jboss.org/docs/DOC-17343](https://developer.jboss.org/docs/DOC-17343)
+Starting from 2021 this page replaces [https://developer.jboss.org/docs/DOC-17343](https://developer.jboss.org/docs/DOC-17343)
 as the definitive source of information specifically on internship placements at Red Hat Newcastle for Newcastle MSc students.
 
 ### Not quite what you're looking for?
@@ -10,9 +10,13 @@ as the definitive source of information specifically on internship placements at
 - [Google Summer of Code](https://summerofcode.withgoogle.com/) projects are at
   [https://docs.jboss.org/display/GSOC/Google+Summer+of+Code+2021+Ideas](https://docs.jboss.org/display/GSOC/Google+Summer+of+Code+2021+Ideas)
 
+---
+
 ## Project Proposals
 
-The following projects are offered to students for summer 2021.
+The following projects are offered to students for summer 2022.
+
+'Specialist skills' identify advanced topics likely to be of relevance to the project. These may be things you wish to demonstrate you already have, making you a more attractive candidate for the project, or things you wish to learn, making the project more attractive to you.
 
 ### io_uring for JMS
 
@@ -23,7 +27,7 @@ In this project you will evaluate the use of io_uring from Java (via JNI) to pro
 enhanced persistent messaging performance in
 [Apache ActiveMQ Artemis](https://activemq.apache.org/components/artemis/).
 
-Skills: Some experience of messaging systems or JNI may be beneficial.
+Specialist skills: Messaging systems, JNI.
 
 Reading: 
 [What is io_uring?](https://unixism.net/loti/what_is_io_uring.html) ;
@@ -32,21 +36,6 @@ Netty transport
 [blog](https://netty.io/news/2020/11/16/io_uring-0-0-1-Final.html) and
 [src](https://github.com/netty/netty-incubator-transport-io_uring)
 
-### SIMD Vector operations for Java
-
-The new jdk.incubator.vector module provides Java with a portable API for accessing a hardware platform's vector (SIMD) instructions.
-This brings the potential for accelerating many operations, including image and signal processing.
-For middleware applications, however, the most interesting application may be JSON Parsing.
-
-In this project you will evaluate the use of the new Java Vector instruction API for accelerating processing tasks applicable to Red Hat's middleware portfolio.
-
-Skills: Some experience of vector processing, parsing or benchmarking may be beneficial.
-
-Reading:
-[JEP-338](https://openjdk.java.net/jeps/338) ;
-[simdjson](https://github.com/simdjson/simdjson) ;
-[mison](https://www.microsoft.com/en-us/research/publication/mison-fast-json-parser-data-analytics/)
-
 ### WebAssembly Java integration
 
 WebAssembly is a binary instruction format for a virtual machine, providing a portable compilation target for several languages.
@@ -54,7 +43,7 @@ Embedded in many web browsers, it interoperates well with JavaScript. Interopera
 
 In this project you will investigate and enhance the integration of WebAssembly and JVM languages, with particular attention to allowing calls between them, in either or both directions.
 
-Skills: Some understanding of low level (assembly) programming and virtual machines may be beneficial.
+Specialist skills: low level (assembly) programming, virtual machines.
 
 Reading:
 [WebAssembly](https://webassembly.org/) ;
@@ -76,7 +65,7 @@ These Java tools are now becoming legacy artifacts in their own right as project
 In this project you will study and apply software archaeology practices, using curation of the z-machine ecosystem as a case study,
 and consider its relation to the Java ecosystem and the challenges of maintaining legacy software written in Java as it itself ages.
 
-Skills: A background in history, anthropology, archaeology or librarianship may be beneficial, as will some knowledge of virtual machine architectures and build systems.
+Specialist skills: virtual machine architectures, build systems. A prior background in history, anthropology, archaeology or librarianship may also be beneficial.
 
 Reading:
 [ifarchive](https://ifarchive.org/) ;
@@ -97,7 +86,7 @@ You will provide guidance and recommendations on the design of a game or game pl
 
 Note: For this project, the code provided with the candidate's application MUST take the form of an original bot for playing a code game such as those linked below. Any programming language may be used.
 
-Skills: Experience with game design, technical recruitment or middleware skills training may be beneficial.
+Specialist skills: game design, technical recruitment, middleware skills training.
 
 Reading:
 [codingame](https://www.codingame.com/) ;
@@ -114,17 +103,66 @@ Tools exist to rebalance a Kafka cluster by either switching which Topic replica
 
 In this project you will use Kafka running on Kubernetes to investigate two things. Firstly, what are the optimal (or good) values for tuning a rebalance to trade off speed vs impact. Secondly, and a stretch goal is to investigate the impact of a rebalance on a running cluster. For instance, how long will it take? Will the existing workload be affected? What are the financial implications if certain data transfers are charged for and others not?
 
-Skills: An interest in distrubuted systems and performance modelling may be beneficial.
+Specialist skills: distrubuted systems, performance modelling.
 
 Reading: [Kafka - The Definitive Guide](https://github.com/jitendra3109/ApacheKafka/blob/master/Docs/confluent-kafka-definitive-guide-complete.pdf); 
 [Cruise Control introduction](https://www.youtube.com/watch?v=lf31udm9cYY);
 [Strimzi - Running Kafka on Kubernetes](https://strimzi.io/)
 
 
+### Project Panama evaluation
+
+OpenJDK's [Project Panama](https://jdk.java.net/panama/) foreign function support offers a new approach to calling native libraries from Java. Existing integrations across a number of Red Hat projects use the older [JNI](https://docs.oracle.com/en/java/javase/17/docs/specs/jni/index.html) solution for this requirement.
+As native libraries are used to increase scalability or accelerate performance critical code at the cost of more complex build processes, the choice of integration approach is of material interest to us and any opportunity for improvement is attractive.
+
+In this project you will identify and evaluate opportunities for replacing JNI with panama across Red Hat's portfolio of open source projects, prototyping and benchmarking one or more solutions and reporting on issues found.
+
+Specialist skills: C programming, micro benchmarking, build systems.
+
+
+### eBPF for Java application observability
+
+Observability and monitoring are key to operating reliable, performant cloud services. Red Hat's vertical integration across the operating system (RHEL), container platform (OpenShift), runtime (OpenJDK) and framework (Quarkus, Wildfly) provide us a wide-ranging opportunity for powerfully integrated, holistic solutions in this area.
+
+Horizontally stratified tools e.g. [jfr](https://developers.redhat.com/blog/2020/08/25/get-started-with-jdk-flight-recorder-in-openjdk-8u#about_jdk_flight_recorder), whilst useful, may provide a narrower view compared to approaches that unify data from different layers of the stack. With this in mind, OpenJDK also contains instrumentation for integrating with [eBPF](https://ebpf.io/), an efficient in-kernel tracing solution with overhead low enough for production use.
+
+In this project you will evaluate the opportunities that exist for using eBPF in relation to observability of cloud-native Java microservices.
+
+Specialist skills: DevOps, performance engineering, cloud microservices.
+
+
+### Bufferbloat in reactive microservices
+
+Networked applications are known to suffer increased latency and jitter due to [bufferbloat](https://en.wikipedia.org/wiki/Bufferbloat), the excess buffering of data packets in network devices.
+
+Reactive applications such as those built with [Quarkus](https://quarkus.io/guides/getting-started-reactive) have an event-driven queue and service architecture that broadly resembles a network architecture, with events or messages replacing TCP/IP packets. Whilst non-blocking execution is the initial focus of performance work for reactive code, this ignores the subtle, low-level details of how messages are buffered inside the libraries.
+
+In the same way that TCP/IP's default sliding window algorithm is insufficient to fully address performance issues arising from bufferbloat, so too it may be that simple backpressue mechanisms are insufficient to maximise performance for reactive microservices. Additionally, large buffers can increase memory footprint, requiring larger, more expensive containers to be used in cloud deployments.
+
+In this project you will investigate the internals of reactive libraries, develop benchmarks and testing methods to examine and tune message buffer sizes, timeouts and other default settings and policies at various levels of the stack, assessing the impact of these on application footprint and performance.
+
+Specialist skills: reactive application architecture, performance engineering.
+
+
+### Low-code reactive applications
+
+Low-code platforms such as [appsmith](https://www.appsmith.com/) aim to increase developer productivity through visual tooling and code generation techniques. However, many such platforms continue to generate older style applications which ignore the many benefits of [reactive](https://www.reactivemanifesto.org/) application architecture.
+
+[Quarkus](https://quarkus.io/about/) is a framework for Java microservices, with full support for reactive apps and a strong focus on developer joy and efficient tooling. However, whilst it makes writing code a fast, fun experience, it does still require that code to be written largely by hand.
+
+Bringing together low-code tooling and Quarkus has the potential to further enhance developer productivity by automating more of the routine coding required for many applications, whilst simultaneously improving runtime efficiency through use of a reactive approach.
+
+In this project you will explore the opportunities for new tools and frameworks to extend Quarkus with greater low-code application development capabilities.
+
+Specialist skills: reactive applications, code generation.
+
+
 ### Roll your own project
 
 Internship candidates may also submit proposals of their own devising, in the form of a brief outline of the topic and a clear description of how it aligns with Red Hat's needs.
 Topics may be original, or drawn from existing open source project roadmaps and JIRA issues.
+
+---
 
 ## Application Procedure
 
@@ -138,10 +176,9 @@ New proposals may be added to this page until mid February.
 In such case, earlier applicants may change their project preference to one of the new topics.
 
 We like: links to github repos; originality; documentation; unit tests.  
-We don't like: cover letters; code that doesn't compile; tests that fail; code you didn't write yourself (especially if it doesn't compile or pass its tests.)
-Yes, we've seen it all before... 
+We don't like: cover letters; code that doesn't compile; tests that fail.
 
-For summer 2021 we expect to be operating entirely online, with interviews and subsequent project supervision taking place without physical contact.
-Whilst our Newcastle office may reopen over the course of the summer, attendance onsite would then be optional not mandatory.
+For summer 2022 we expect to be operating entirely online, with interviews and subsequent project supervision taking place without physical contact.
+Depending on circumstances, there may also be the option of working from our Newcastle office.
 
-Deadline for applications: 12 noon, Monday 22nd February, 2021.
+Deadline for applications: 12 noon, Monday 21st February, 2022.
