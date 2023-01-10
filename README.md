@@ -71,21 +71,6 @@ Reading:
 [Phlare](https://grafana.com/oss/phlare/)
 
 
-### Effectiveness of rebalancing a Kafka cluster
-
-Apache Kafka is a distributed messaging platform capable of very high performance and horizontally scalable. In Kafka, messages are stored in Topics which are replicated and distributed across the Brokers which form the cluster. In a balanced cluster the Topics are evenly distributed amongst the Brokers. However, in practice, clusters become unbalanced due to either poor design, unpredictable workloads or the addition/removal of Brokers.
-
-Tools exist to rebalance a Kafka cluster by either switching which Topic replica is the master, or by moving replicas to under-utilised Brokers. This latter operation can be expensive and take hours to migrate data from one Broker to another. During this time the cluster will be operating at reduced capacity because I/O and network bandwidth is being taken up with the rebalance.
-
-In this project you will use Kafka running on Kubernetes to investigate two things. Firstly, what are the optimal (or good) values for tuning a rebalance to trade off speed vs impact. Secondly, and a stretch goal is to investigate the impact of a rebalance on a running cluster. For instance, how long will it take? Will the existing workload be affected? What are the financial implications if certain data transfers are charged for and others not?
-
-Specialist skills: distributed systems, performance modelling.
-
-Reading: [Kafka - The Definitive Guide](https://github.com/jitendra3109/ApacheKafka/blob/master/Docs/confluent-kafka-definitive-guide-complete.pdf); 
-[Cruise Control introduction](https://www.youtube.com/watch?v=lf31udm9cYY);
-[Strimzi - Running Kafka on Kubernetes](https://strimzi.io/)
-
-
 ### Concurrency and actor frameworks on Project Loom
 
 Project Loom brings lightweight threads to the Java platform. This opens the way to more efficient implementation of some patterns and approaches to programming concurrent systems that have previously been found useful in other languages but challenging to execute well in Java.
@@ -95,14 +80,18 @@ In this project you will investigate the concurrency programming abstractions av
 
 Specialist skills: concurrent programming abstractions, polyglot programming.
 
+Reading:
+[Project Loom](https://openjdk.org/projects/loom/) ;
+[Loom Presentation](https://speakerdeck.com/josepaumard/loom-is-blooming)
+
 
 ### Enhanced Flame Graph rendering
 
 Flame Graphs are a popular mechanism for visualising stack trace data from software performance profiles. However, they are often poorly integrated with other developer tools, particularly source code browsers and editors.
 
-In this project, you will enhance tools for rendering flame graphs of Java code profiles, to hyperlink frames to function source code, either via the web or as an IDE plugin.
+In this project, you will enhance tools for rendering Flame Graphs of Java code profiles, to hyperlink frames to function source code.
 
-Specialist skills: html/svg, profiling tools, IDE plugins or source management tools.
+Specialist skills: html/svg, profiling tools, source code management tools.
 
 Reading:
 [Flame Graphs](https://www.brendangregg.com/flamegraphs.html) ;
@@ -118,7 +107,7 @@ As native libraries are used to increase scalability or accelerate performance c
 
 In this project you will identify and evaluate opportunities for replacing JNI with Panama across Red Hat's portfolio of open source projects, prototyping and benchmarking one or more solutions and reporting on issues found.
 
-Specialist skills: C programming, micro benchmarking, build systems.
+Specialist skills: C programming, micro-benchmarking, build systems.
 
 ### Low-code reactive applications
 
@@ -168,7 +157,7 @@ Topics may be original, or drawn from existing open source project roadmaps and 
 ## Application Procedure
 
 Select one preferred project and optionally one reserve choice from the list above.
-Send us your choices, along with a CV and some source code that you think demonstrates your software engineering skills well.
+Send me your choices, along with a CV and some source code that you think demonstrates your software engineering skills well.
 This should be in Java, unless the project topic specifically calls for another language.
 The topic choices will be used to route your application to the relevant supervisor(s),
 who will review your application and may then invite you to a technical interview.
@@ -179,4 +168,4 @@ We don't like: cover letters; code that doesn't compile; tests that fail.
 For summer 2023 we expect to be operating entirely online, with interviews and subsequent project supervision taking place without physical contact.
 Depending on circumstances, there may also be the option of working from our Newcastle office.
 
-Deadline for applications: 12 noon, Monday 6th March, 2023.
+Deadline for applications: 12 noon, Friday 24th February, 2023.
