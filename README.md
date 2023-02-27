@@ -168,4 +168,23 @@ We don't like: cover letters; code that doesn't compile; tests that fail.
 For summer 2023 we expect to be operating entirely online, with interviews and subsequent project supervision taking place without physical contact.
 Depending on circumstances, there may also be the option of working from our Newcastle office.
 
-Deadline for applications: 12 noon, Friday 24th February, 2023.
+**Deadline for applications: 12 noon, Friday 24th February, 2023.**
+
+---
+
+## Interview Process
+
+If your application is good enough, you'll be invited to interview. This will be an online discussion with the supervisor of your preferred project and perhaps some of their engineering team, lasting up to 30 minutes. In most cases this will be the only interview you need to do.
+
+The interview structure depends on the supervisor, but will be largely technical and usually cover:
+
+- Your educational and professional background, particularly any software engineering experience with the language of the selected project.
+- The code you submitted with your application, particularly with regard to your design and implementation decisions and approach to testing. You may be asked to describe how you would tackle a new requirement or feature, but live coding will not be required.
+- What Red Hat does and how placement projects at Red Hat Newcastle operate.
+- The project topic you've selected, what we hope to achieve, how you will contribute and what you'll learn. Whilst the project is a learning experience, you will still be expected to demonstrate some basic understanding of the topic you've chosen and describe how you may approach the work.
+- Any other questions you have.
+
+Candidates may prepare for interview by:
+- Reviewing their submitted code to ensure it's well understood.
+- Reading about, or experimenting with software relevant to, the selected project topic.
+
