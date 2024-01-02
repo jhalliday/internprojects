@@ -1,7 +1,7 @@
 # Red Hat Newcastle Student Projects
 
 Starting from 2021 this page replaces [https://developer.jboss.org/docs/DOC-17343](https://developer.jboss.org/docs/DOC-17343)
-as the definitive source of information specifically on internship placements at Red Hat Newcastle for Newcastle MSc students.
+as the definitive source of information specifically on internship placements at Red Hat Newcastle for students at local Universities.
 
 ### Not quite what you're looking for?
 - For global information try [Red Hat Research](https://research.redhat.com)
@@ -14,7 +14,7 @@ as the definitive source of information specifically on internship placements at
 
 ## Project Proposals
 
-The following projects are offered to students for summer 2023.
+The following projects are offered to students for summer 2024.
 
 'Specialist skills' identify advanced topics likely to be of relevance to the project. These may be things you wish to demonstrate you already have, making you a more attractive candidate for the project, or things you wish to learn, making the project more attractive to you.
 
@@ -24,16 +24,28 @@ The following projects are offered to students for summer 2023.
 WebAssembly is a binary instruction format for a virtual machine, providing a portable compilation target for several languages.
 Embedded in many web browsers, it interoperates well with JavaScript. Interoperability with other languages, including Java, is as yet more limited.
 
-In this project you will investigate and enhance the integration of WebAssembly and JVM languages, with particular attention to allowing method calls and data sharing from Java to WASM code.
+In this project you will investigate and enhance the integration of WebAssembly and JVM languages, with particular attention to allowing method calls and data sharing between Java and WASM code.
 
 Specialist skills: low level (assembly) programming, virtual machines.
 
 Reading:
 [WebAssembly](https://webassembly.org/) ;
 [Wasmer](https://wasmer.io/) ;
-[GraalWASM](https://www.graalvm.org/latest/reference-manual/wasm/) ;
-[Happy New Moon with Report](https://github.com/fishjd/HappyNewMoonWithReport)
+[Extism](https://extism.org/) ;
+[GraalWASM](https://www.graalvm.org/latest/reference-manual/wasm/)
 
+
+### Project Panama evaluation
+
+OpenJDK's [Project Panama](https://jdk.java.net/panama/) foreign function and memory support offers a new approach to calling native libraries from Java.
+Whilst the project is aimed initially at providing an alternative to [JNI](https://docs.oracle.com/en/java/javase/17/docs/specs/jni/index.html) for access to C code, it also has potential for facilitating interoperability with other formats such as WebAssembly's [component model](https://github.com/WebAssembly/component-model) ABI or memory layout mechanisms such as [Apache Arrow](https://arrow.apache.org/).
+
+In this project you will evaluate the use of Panama's API and tooling for these alternative use cases and develop guidance and tool support for its use in such tasks.
+
+Specialist skills: machine architecture and in-memory data representation, C programming, WebAssembly.
+
+Reading:
+[JEP 454: Foreign Function & Memory API](https://openjdk.org/jeps/454)
 
 ### Code games for software recruitment
 
@@ -51,38 +63,9 @@ Specialist skills: game design, technical recruitment, middleware skills trainin
 Reading:
 [codingame](https://www.codingame.com/) ;
 [battlesnake](https://play.battlesnake.com/) ;
-[Halite](https://halite.io/) ;
+[Lux AI](https://www.lux-ai.org/) ;
 [battlecode](https://battlecode.org/) ;
 [microcorruption](https://microcorruption.com/login)
-
-
-### Observability database evaluation
-
-Observability tooling is essential to DevOps teams and relies on databases capable of ingesting and indexing large volumes of observation data. With correlation of data from different signal types (logs, metrics, traces and profiles) becoming increasingly valued, such databases must be able to handle diverse data types and query patterns in a unified manner. Specialising storage solutions for one type of data e.g. time series metrics can bring benefits, but often at the cost of poorly handling other types of data. Thus unified observability databases face challenging and sometimes conflicting requirements.
-
-In this project you will empirically evaluate and report on the data storage technologies in use across the observability tooling ecosystem, with an emphasis on identifying open source solutions suitable for combined storage of diverse signal types at scale.
-
-Specialist skills: observability tools; databases, including distributed and no-sql.
-
-Reading:
-[OpenTelemetry](https://opentelemetry.io/docs/) ;
-[FrostDB](https://www.polarsignals.com/blog/posts/2022/05/04/introducing-arcticdb/) ;
-[Husky](https://www.datadoghq.com/blog/engineering/introducing-husky/) ;
-[Phlare](https://grafana.com/oss/phlare/)
-
-
-### Concurrency and actor frameworks on Project Loom
-
-Project Loom brings lightweight threads to the Java platform. This opens the way to more efficient implementation of some patterns and approaches to programming concurrent systems that have previously been found useful in other languages but challenging to execute well in Java.
-What higher-level constructs can Java now adopt from other languages and how will the availability of lightweight threads affect the relative attractiveness and performance of existing Java frameworks?
-
-In this project you will investigate the concurrency programming abstractions available in the Java ecosystem and compare them to those found in other languages that already have a lightweight thread abstraction, such a golang's goroutines, Scala Actors, and Erlang processes.
-
-Specialist skills: concurrent programming abstractions, polyglot programming.
-
-Reading:
-[Project Loom](https://openjdk.org/projects/loom/) ;
-[Loom Presentation](https://speakerdeck.com/josepaumard/loom-is-blooming)
 
 
 ### Enhanced Flame Graph rendering
@@ -91,7 +74,7 @@ Flame Graphs are a popular mechanism for visualising stack trace data from softw
 
 In this project, you will enhance tools for rendering Flame Graphs of Java code profiles, to hyperlink frames to function source code.
 
-Specialist skills: html/svg, profiling tools, source code management tools.
+Specialist skills: html/svg, profiling tools, source code management and CI/CD tools, IDE plugins.
 
 Reading:
 [Flame Graphs](https://www.brendangregg.com/flamegraphs.html) ;
@@ -99,55 +82,40 @@ Reading:
 [Java Flight Recorder](https://docs.oracle.com/en/java/java-components/jdk-mission-control/8/user-guide/whats-new-jdk-mission-control.html#GUID-412659B5-9BA1-4895-B670-245D6823A8BC) ;
 [Sourcegraph](https://about.sourcegraph.com/)
 
+### Observability signal correlation
 
-### Project Panama evaluation
+Efficient use of observability signals, which consist of logs, metrics, traces and profiling data, is key to managing software systems in production.
+Emerging trends in observability operations place an increasing emphasis on the value of correlating these signal types to investigate issues,
+but supporting this requirement fully involves adding new functionality to observability signal generation mechanisms.
 
-OpenJDK's [Project Panama](https://jdk.java.net/panama/) foreign function support offers a new approach to calling native libraries from Java. Existing integrations across a number of Red Hat projects use the older [JNI](https://docs.oracle.com/en/java/javase/17/docs/specs/jni/index.html) solution for this requirement.
-As native libraries are used to increase scalability or accelerate performance critical code at the cost of more complex build processes, the choice of integration approach is of material interest to us and any opportunity for improvement is attractive.
+In this project you will investigate and improve observability signal correlation in the JVM ecosystem,
+with a focus on trace ids and code profiling tools.
 
-In this project you will identify and evaluate opportunities for replacing JNI with Panama across Red Hat's portfolio of open source projects, prototyping and benchmarking one or more solutions and reporting on issues found.
-
-Specialist skills: C programming, micro-benchmarking, build systems.
-
-### Low-code reactive applications
-
-Low-code platforms such as [appsmith](https://www.appsmith.com/) aim to increase developer productivity through visual tooling and code generation techniques. However, many such platforms continue to generate older style applications which ignore the many benefits of [reactive](https://www.reactivemanifesto.org/) application architecture.
-
-[Quarkus](https://quarkus.io/about/) is a framework for Java microservices, with full support for reactive apps and a strong focus on developer joy and efficient tooling. However, whilst it makes writing code a fast, fun experience, it does still require that code to be written largely by hand.
-
-Bringing together low-code tooling and Quarkus has the potential to further enhance developer productivity by automating more of the routine coding required for many applications, whilst simultaneously improving runtime efficiency through use of a reactive approach.
-
-In this project you will explore the opportunities for new tools and frameworks to extend Quarkus with greater low-code application development capabilities.
-
-Specialist skills: reactive applications, code generation.
-
-
-### Software archaeology for the z-machine
-
-[Software archaeology](https://en.wikipedia.org/wiki/Software_archaeology) is the study of legacy software, which is often abandoned, incomplete, poorly documented, or able to run only on hardware platforms or in software environments which are no longer widely available.
-A variety of tools and techniques are available to analyse, document, reconstruct and execute such artifacts.
-
-The Infocom [z-machine](https://en.wikipedia.org/wiki/Z-machine) is a virtual machine developed for early text adventure games,
-including key works of the genre such as [Zork](https://www.technologyreview.com/2017/08/22/149560/the-enduring-legacy-of-zork/), which thanks to software archaeology is [playable online](http://textadventures.co.uk/games/view/5zyoqrsugeopel3ffhz_vq/zork).
-
-Java has been used to replace or emulate older tools, including z-machine interpreters.
-These Java tools are now becoming legacy artifacts in their own right as projects are abandoned, leading to a form of meta-archaeology to maintain them.
-
-In this project you will study and apply software archaeology practices, using curation of the z-machine ecosystem as a case study,
-and consider its relation to the Java ecosystem and the challenges of maintaining legacy software written in Java as it itself ages.
-
-Specialist skills: virtual machine architectures, build systems. A prior background in history, anthropology, archaeology or librarianship may also be beneficial.
+Specialist Skills: Observability, DevOps, JVM platform (C/C++) programming, eBPF.
 
 Reading:
-[ifarchive](https://ifarchive.org/) ;
-[Inform Fiction](https://inform-fiction.org/) ;
-[ZILCH How-to](https://github.com/ZoBoRf/ZILCH-How-to) ;
-[ZAX](https://github.com/mattkimmel/zax) ;
-[Zplet](https://github.com/XelaRellum/ZPlet) ;
-[ZMPP](https://github.com/wandora-team/zmpp-wandora)
+[OpenTelemetry](https://opentelemetry.io/) ;
+[async-profiler](https://github.com/jvm-profiling-tools/async-profiler/) ;
+[Java Flight Recorder](https://docs.oracle.com/en/java/java-components/jdk-mission-control/8/user-guide/)
 
 
-### Roll your own project
+
+### FinOps and profiling datastore design.
+
+For cost-efficient cloud computing utilization, the disciplines of DevOps and finance must be combined to understand spending and manage resources.
+Within the emerging field of Cloud FinOps, data generated by code profilers can be combined with cloud CPU cost data to give stakeholders new insights.
+However, this requires integrating data traditionally held in separate systems and presenting it in a matter intelligible to users with different backgrounds and expectations.
+
+In this project you will investigate the tools and standards available for data managment in the area of FinOps and devise storage and query approaches focussed on attributing costs to code at a fine-grained (i.e. function call) level.
+
+Specialist Skills: Accounting, Observability.
+
+Reading:
+[OpenCost](https://www.opencost.io/)
+
+
+
+### Create your own project
 
 Internship candidates may also submit proposals of their own devising, in the form of a brief outline of the topic and a clear description of how it aligns with Red Hat's needs.
 Topics may be original, or drawn from existing open source project roadmaps and JIRA/github issues.
@@ -157,18 +125,24 @@ Topics may be original, or drawn from existing open source project roadmaps and 
 ## Application Procedure
 
 Select one preferred project and optionally one reserve choice from the list above.
-Send me your choices, along with a CV and some source code that you think demonstrates your software engineering skills well.
-This should be in Java, unless the project topic specifically calls for another language.
+Send me your choices, along with a CV and a portfolio of source code that you think demonstrates your software engineering skills well.
+Submitted work should be in Java, unless the selected project topic specifically calls for another language.
 The topic choices will be used to route your application to the relevant supervisor(s),
 who will review your application and may then invite you to a technical interview.
 
-We like: links to github repos; originality; documentation; unit tests.  
+Note that initial code review is typically a harder step than the subsequent interview.
+Allow sufficient preparation time to assemble a suitable portfolio of work for your application.
+Applications may include university coursework, but preferably should not consist entirely of such structured exercises.
+Ensure you have the necessary rights to all the work submitted. In particular, DO NOT submit work done in the course of employment unless it is explicitly open source or you have the employer's permission to disclose it.
+
+We like: links to github repos; originality; documentation; unit tests.
+
 We don't like: cover letters; code that doesn't compile; tests that fail.
 
-For summer 2023 we expect to be operating entirely online, with interviews and subsequent project supervision taking place without physical contact.
+For summer 2024 we expect to be operating entirely online.
 Depending on circumstances, there may also be the option of working from our Newcastle office.
 
-**Deadline for applications: 12 noon, Friday 24th February, 2023.**
+**Deadline for applications: 12 noon, Friday 16th February, 2024.**
 
 ---
 
