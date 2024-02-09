@@ -34,6 +34,38 @@ Reading:
 [Extism](https://extism.org/) ;
 [GraalWASM](https://www.graalvm.org/latest/reference-manual/wasm/)
 
+### Transaction interoperability in WebAssembly
+
+WebAssembly provides a compilation target for code written in multiple languages including C, C++, and Rust, and uniquely standardizes the mechanism for function call interoperability and data sharing regardless of the component languages used.
+
+Transaction standards define how components and business logic from different vendors can interoperate to guarantee data integrity. XA, a C-based API specification, is widely implemented by databases, message queues and application runtime platforms.
+
+As an emerging platform, WebAssembly lacks such transaction support at present, limiting its usefulness in enterprises accustomed to this functionality.
+
+In this project, with a focus on the premium open-source transaction manager Narayana, you will investigate how XA distributed transactions can be provided in the WebAssembly ecosystem, with a emphasis on interoperation between components written in different languages.
+
+Specialist skills: polyglot programming, distributed transactions, database drivers, virtual machines.
+
+Reading:
+[WebAssembly](https://webassembly.org/) ;
+[Extism](https://extism.org/) ;
+[Narayana](https://www.narayana.io/)
+
+### Transactional Microservices in Webassembly
+
+WebAssembly (WASM) is emerging as a language neutral compilation target for server-side microservices frameworks, offering good portability and small deployment footprints. Its web and database support is evolving rapidly, building on WASI, WASIX and the WASM component model. At this early stage many opportunities exist to add further foundational capabilities to the platform and shape its future.
+
+Microprofile’s Long-Running Action (LRA) protocol provides an open, interoperable standard for implementing transactional microservices. Enhancing existing WASM web support with LRA capabilities would increase its utility for business applications.
+
+In this project, the student will craft an LRA participant in a language of their preference and use WebAssembly to make it available on the web, providing the world's first such example of using the platform in this way.
+
+Specialist skills: polyglot programming, web services, distributed transactions, LRA protocol.
+
+Reading:
+[WebAssembly](https://webassembly.org/) ;
+[Spin](https://developer.fermyon.com/spin/v2/index) ;
+[Narayana](https://www.narayana.io/) ;
+[LRA](https://download.eclipse.org/microprofile/microprofile-lra-1.0-M1/microprofile-lra-spec.html)
 
 ### Project Panama evaluation
 
