@@ -55,7 +55,7 @@ Reading:
 
 WebAssembly (WASM) is emerging as a language neutral compilation target for server-side microservices frameworks, offering good portability and small deployment footprints. Its web and database support is evolving rapidly, building on WASI, WASIX and the WASM component model. At this early stage many opportunities exist to add further foundational capabilities to the platform and shape its future.
 
-Microprofile’s Long-Running Action (LRA) protocol provides an open, interoperable standard for implementing transactional microservices. Enhancing existing WASM web support with LRA capabilities would increase its utility for business applications.
+MicroProfile’s Long-Running Action (LRA) protocol provides an open, interoperable standard for implementing transactional microservices. Enhancing existing WASM web support with LRA capabilities would increase its utility for business applications.
 
 In this project, the student will craft an LRA participant in a language of their preference and use WebAssembly to make it available on the web, providing the world's first such example of using the platform in this way.
 
