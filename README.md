@@ -14,25 +14,11 @@ as the definitive source of information specifically on internship placements at
 
 ## Project Proposals
 
-The following projects are offered to students for summer 2024.
+The following projects are offered to students for summer 2025.
+
+**[ January 2025: Caution, this is still a draft list and may change! ]**
 
 'Specialist skills' identify advanced topics likely to be of relevance to the project. These may be things you wish to demonstrate you already have, making you a more attractive candidate for the project, or things you wish to learn, making the project more attractive to you.
-
-
-### WebAssembly Java integration
-
-WebAssembly is a binary instruction format for a virtual machine, providing a portable compilation target for several languages.
-Embedded in many web browsers, it interoperates well with JavaScript. Interoperability with other languages, including Java, is as yet more limited.
-
-In this project you will investigate and enhance the integration of WebAssembly and JVM languages, with particular attention to allowing method calls and data sharing between Java and WASM code.
-
-Specialist skills: low level (assembly) programming, virtual machines.
-
-Reading:
-[WebAssembly](https://webassembly.org/) ;
-[Wasmer](https://wasmer.io/) ;
-[Extism](https://extism.org/) ;
-[GraalWASM](https://www.graalvm.org/latest/reference-manual/wasm/)
 
 ### Transaction interoperability in WebAssembly
 
@@ -67,6 +53,7 @@ Reading:
 [Narayana](https://www.narayana.io/) ;
 [LRA](https://download.eclipse.org/microprofile/microprofile-lra-1.0-M1/microprofile-lra-spec.html)
 
+
 ### Project Panama evaluation
 
 OpenJDK's [Project Panama](https://jdk.java.net/panama/) foreign function and memory support offers a new approach to calling native libraries from Java.
@@ -78,26 +65,6 @@ Specialist skills: machine architecture and in-memory data representation, C pro
 
 Reading:
 [JEP 454: Foreign Function & Memory API](https://openjdk.org/jeps/454)
-
-### Code games for software recruitment
-
-As the structural shortage of suitably skilled candidates continues to worsen, fresh attention is being paid to means of identifying and attracting technical talent to employers.
-The use of games centred on programming as a recruitment tool is gaining traction in the industry as an alternative or complement to traditional means of candidate filtering.
-At present, such games focus on core skills such as algorithms and datastructures, with some attention to trends such as machine learning.
-
-In this project you will study the ecosystem of programming games and their platforms, with attention to their relevance for identifying the skills needed by Red Hat engineers.
-You will provide guidance and recommendations on the design of a game or game platform that may better suit our needs than existing offerings, perhaps including designing or prototyping.
-
-Note: For this project, the code provided with the candidate's application MUST take the form of an original bot for playing a code game such as those linked below. Any programming language may be used.
-
-Specialist skills: game design, technical recruitment, middleware skills training.
-
-Reading:
-[codingame](https://www.codingame.com/) ;
-[battlesnake](https://play.battlesnake.com/) ;
-[Lux AI](https://www.lux-ai.org/) ;
-[battlecode](https://battlecode.org/) ;
-[microcorruption](https://microcorruption.com/login)
 
 
 ### Enhanced Flame Graph rendering
@@ -114,31 +81,40 @@ Reading:
 [Java Flight Recorder](https://docs.oracle.com/en/java/java-components/jdk-mission-control/8/user-guide/whats-new-jdk-mission-control.html#GUID-412659B5-9BA1-4895-B670-245D6823A8BC) ;
 [Sourcegraph](https://about.sourcegraph.com/)
 
-### Observability signal correlation
 
-Efficient use of observability signals, which consist of logs, metrics, traces and profiling data, is key to managing software systems in production.
-Emerging trends in observability operations place an increasing emphasis on the value of correlating these signal types to investigate issues,
-but supporting this requirement fully involves adding new functionality to observability signal generation mechanisms.
+### Reactive XA database drivers
 
-In this project you will investigate and improve observability signal correlation in the JVM ecosystem,
-with a focus on trace ids and code profiling tools.
+A reactive programming style offers some advantages in performance and scalability, but reactive libraries often lack useful functionality found in more mature blocking APIs.
+For enterprise applications, XA transactions are critical to preserving data integrity.
+XA integration in Java is provided by JDBC database drivers, but reactive database APIs provide no equivalent.
 
-Specialist Skills: Observability, DevOps, JVM platform (C/C++) programming, eBPF.
+In this project, you will extend the reactive drivers for one or more databases to provide XA functions.
+
+Specialist skills: Reactive programming, XA transactions.
 
 Reading:
-[OpenTelemetry](https://opentelemetry.io/) ;
-[async-profiler](https://github.com/jvm-profiling-tools/async-profiler/) ;
-[Java Flight Recorder](https://docs.oracle.com/en/java/java-components/jdk-mission-control/8/user-guide/)
+[Quarkus Hibernate Reactive](https://quarkus.io/guides/hibernate-reactive) ;
+[Vert.x Reactive SQL Client](https://github.com/eclipse-vertx/vertx-sql-client)
 
 
+### Java profiler comparison
 
-### FinOps and profiling datastore design.
+Accurate and comprehensive profiling tools are critical to understanding application performance and enabling developers to tune their code.
+The leading Java profiling tools take diverse approaches to data gathering, understanding of which is required to interpret their output correctly.
+
+In this project you will evaluate and compare JFR, async-profiler and OpenTelemetry's eBPF profiler, with a focus on identifying differences in their CPU profiling capabilities.
+Reconciling discrepancies in their output and providing guidance on best-practice for their usage will be key to enabling users to maximise the benefit of these tools.
+
+Specialist skills: DevOps, performance engineering, cloud microservices observability.
+
+
+### FinOps and profiling tool design.
 
 For cost-efficient cloud computing utilization, the disciplines of DevOps and finance must be combined to understand spending and manage resources.
 Within the emerging field of Cloud FinOps, data generated by code profilers can be combined with cloud CPU cost data to give stakeholders new insights.
 However, this requires integrating data traditionally held in separate systems and presenting it in a matter intelligible to users with different backgrounds and expectations.
 
-In this project you will investigate the tools and standards available for data managment in the area of FinOps and devise storage and query approaches focussed on attributing costs to code at a fine-grained (i.e. function call) level.
+In this project you will investigate the tools and standards available for data management in the area of FinOps and devise storage and query approaches focussed on attributing costs to code at a fine-grained (i.e. function call) level.
 
 Specialist Skills: Accounting, Observability.
 
@@ -146,10 +122,64 @@ Reading:
 [OpenCost](https://www.opencost.io/)
 
 
+### Observability database evaluation
+
+Observability tooling is essential to DevOps teams and historically relies on an assortment of data storage solutions handling different telemetry signal types.
+More recent approaches, sometimes dubbed Observability 2.0, use a unified wide-event model and column oriented databases.
+The addition of continuous profiling data alongside the existing metrics, traces and logs, provides a new set of requirements for both of these approaches.
+
+In this project you will empirically evaluate and report on the data storage approaches in use across the cloud observability ecosystem, with an emphasis on identifying cost-effective open source solutions suitable for combined storage of diverse signal types, including profiling data, at scale.
+
+Specialist skills: observability tools; databases, including distributed and no-sql.
+
+Reading:
+[OpenTelemetry](https://opentelemetry.io/docs/) ;
+[FrostDB](https://www.polarsignals.com/blog/posts/2022/05/04/introducing-arcticdb/) ;
+[Husky](https://www.datadoghq.com/blog/engineering/introducing-husky/) ;
+[Phlare](https://grafana.com/oss/phlare/)
+
+
+### Machine learning for full line code completion
+
+Programmer's IDEs (e.g. Intelli IDEA, VSCode, Eclipse) offer fast and seamless next-token code completion based on hardcoded rules, language grammar and the project code structure.
+At the other end of the spectrum, programming-centric LLMs such as GitHub Copilot provide contextual code generation. However, these models are slow and expensive to operate.
+
+Between these approaches lies a midpoint where smaller, less resource intensive AI language models are supplemeted by tight integration with the IDE's project structure information.
+This hybrid approach has the potential to provide full line code completion in a fast, small footprint manner. However, there is currently no open source implementation.
+
+In this project you will develop and evaluate an open source hybrid approach for full line code completion of Java source code.
+
+Specialist skills: machine learning, compilers.
+
+Reading:
+[Language Server Protocol](https://microsoft.github.io/language-server-protocol/) ;
+[Full Line Code Completion](https://blog.jetbrains.com/blog/2024/04/04/full-line-code-completion-in-jetbrains-ides-all-you-need-to-know/)
+
+
+### Code games for software recruitment
+
+As the problem of identifying suitably skilled candidates continues to worsen, attention is being paid to novel means of selection.
+Amongst these is the use of games centred on programming as an alternative or complement to traditional means of candidate filtering.
+These games focus on core skills such as algorithms and datastructures, with some attention to trends such as machine learning.
+
+In this project you will study the ecosystem of programming games and their platforms, with attention to their relevance for identifying the skills needed by Red Hat engineers.
+You will provide guidance and recommendations on the design of a game or game platform that may better suit our needs than existing offerings, perhaps including designing or prototyping.
+
+Note: For this project, the code provided with the candidate's application MUST take the form of an original bot for playing a code game such as those linked below. Any programming language may be used.
+
+Specialist skills: game design, technical recruitment, middleware skills training.
+
+Reading:
+[codingame](https://www.codingame.com/) ;
+[battlesnake](https://play.battlesnake.com/) ;
+[Lux AI](https://www.lux-ai.org/) ;
+[battlecode](https://battlecode.org/) ;
+[microcorruption](https://microcorruption.com/login)
+
 
 ### Create your own project
 
-Internship candidates may also submit proposals of their own devising, in the form of a brief outline of the topic and a clear description of how it aligns with Red Hat's needs.
+Applicants may also submit proposals of their own devising, in the form of a brief outline of the topic and a clear description of how it aligns with Red Hat's needs.
 Topics may be original, or drawn from existing open source project roadmaps and JIRA/github issues.
 
 ---
@@ -163,18 +193,18 @@ The topic choices will be used to route your application to the relevant supervi
 who will review your application and may then invite you to a technical interview.
 
 Note that initial code review is typically a harder step than the subsequent interview.
-Allow sufficient preparation time to assemble a suitable portfolio of work for your application.
-Applications may include university coursework, but preferably should not consist entirely of such structured exercises.
+Allow sufficient preparation time to select a suitable portfolio of prior work to support your application.
+Applications may include university coursework, but preferably should not consist entirely of such structured exercises as they provide limited opportunity to demonstrate design skills.
 Ensure you have the necessary rights to all the work submitted. In particular, DO NOT submit work done in the course of employment unless it is explicitly open source or you have the employer's permission to disclose it.
 
 We like: links to github repos; originality; documentation; unit tests.
 
 We don't like: cover letters; code that doesn't compile; tests that fail.
 
-For summer 2024 we expect to be operating entirely online.
+For summer 2025 we expect to be operating entirely online.
 Depending on circumstances, there may also be the option of working from our Newcastle office.
 
-**Deadline for applications: 12 noon, Friday 16th February, 2024.**
+**Deadline for applications: 12 noon, Friday 14th February, 2025.**
 
 ---
 
