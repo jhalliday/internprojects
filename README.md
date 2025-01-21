@@ -20,6 +20,18 @@ The following projects are offered to students for summer 2025.
 
 'Specialist skills' identify advanced topics likely to be of relevance to the project. These may be things you wish to demonstrate you already have, making you a more attractive candidate for the project, or things you wish to learn, making the project more attractive to you.
 
+### Transactuations in ArjunaCore
+
+ArjunaCore, the transactional engine at the heart of Narayana, was originally developed as a university project to provide researchers with an elastic testbed for experimenting with multiple transaction protocols and abstractions. Today, Narayana leverages ArjunaCore’s flexibility to support a wide range of transaction types, from standard Jakarta Transactions (AKA JTA) to Long Running Actions (LRA), covering multiple use cases and scenarios.
+
+The requirements of new technologies, such as microservices, IoT, and cloud computing have introduced interesting challenges that push the boundaries of transaction management. As a consequence, ArjunaCore/Narayana needs to be developed to support new transaction models. In this regard, an innovative concept is "Transactuations", which introduces a runtime system called Relacs to execute transactions that exclude the Durability property of ACID.
+
+This project explores how ArjunaCore’s flexibility can be utilised to implement and expand the Transactuations abstraction, with a focus on applications in cloud environments.
+
+Specialist skills: Java programming, distributed transactions, cloud computing.
+
+Reading: [Narayana](https://www.narayana.io/documentation/) ; [Transactuations](https://www.usenix.org/conference/atc19/presentation/sengupta)
+
 ### Transaction interoperability in WebAssembly
 
 WebAssembly provides a compilation target for code written in multiple languages including C, C++, and Rust, and uniquely standardizes the mechanism for function call interoperability and data sharing regardless of the component languages used.
