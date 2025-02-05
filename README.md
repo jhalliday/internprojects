@@ -63,6 +63,23 @@ Reading:
 [Narayana](https://www.narayana.io/) ;
 [LRA](https://download.eclipse.org/microprofile/microprofile-lra-1.0-M1/microprofile-lra-spec.html)
 
+### DBOS vs LRA
+
+The cloud computing paradigm has introduced new challenges when it comes to software reliability in distributed environments. To address these challenges, many frameworks introduced high-level abstractions to help developers build fault-tolerant applications. This dissertation analyses two of these frameworks: DBOS (Database-Oriented Operating System) and MicroProfile LRA (Long Running Actions).
+
+DBOS is an open-source framework that stores the application's state in a database to ensure that crashes won’t affect executions. On the other hand, LRA is an open-source framework based on distributed transactions that relaxes the isolation property of ACID transactions.
+
+This project will provide the student with hands-on experience on:
+- DBOS and LRA
+- Designing a benchmarking platform to evaluate the performance, productivity (i.e. developer ease of use), scalability, and fault tolerance of both frameworks
+- Empirical experiments to compare various aspects of the two frameworks (e.g. execution efficiency, consistency, failure recovery mechanisms, transaction per seconds, etc.)
+
+Specialist skills: distributed transactions, LRA protocol, Narayana, DBOS.
+
+Reading:
+[Narayana](https://www.narayana.io/) ;
+[LRA](https://download.eclipse.org/microprofile/microprofile-lra-1.0-M1/microprofile-lra-spec.html)
+[DBOS](https://docs.dbos.dev/quickstart)
 
 ### Project Panama evaluation
 
